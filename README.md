@@ -1,2 +1,2 @@
-# FIO
+# ForestInvO
 Forest Inventory Ontology
