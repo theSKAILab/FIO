@@ -1,0 +1,800 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/spatialai/stad/v2/core", "http://purl.org/spatialai/forestinvo/v1/core", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.opengis.net/ont/geosparql" ],
+    "title" : {
+      "en" : "Forest Inventory Ontology (forestinvo)"
+    },
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/",
+    "version" : "1.0",
+    "author" : [ "Torsten Hahmann - http://orcid.org/0000-0002-5331-5052", "Kingsley Wiafe-Kwakye - https://orcid.org/0009-0007-3741-3721", "Kate Beard - https://orcid.org/0000-0002-7703-0270" ],
+    "description" : {
+      "en" : "Forest Inventory Ontology (ForestInvO) offers a structured approach to organizing and representing forest inventory data in a self-describing and interoperable manner."
+    },
+    "other" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "en",
+        "value" : "http://purl.org/spatialai/forestinvo/v1/core/",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/).",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Kate Beard - https://orcid.org/0000-0002-7703-0270",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Torsten Hahmann - http://orcid.org/0000-0002-5331-5052",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Kingsley Wiafe-Kwakye - https://orcid.org/0009-0007-3741-3721",
+        "type" : "label"
+      } ],
+      "subject" : [ {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "Forest data",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "Forest inventory",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "tree inventory",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-06-12",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2024-05-30",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "en",
+        "value" : "Spatial Knowledge and Artificial Intelligence (SKAI) Lab, University of Maine",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2024-06-12",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Forest Inventory Ontology (forestinvo)",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "23",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InventoryPlot"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/PlotInventory",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PlotInventory"
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/QualitativeValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualitativeValue"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "23",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/Organism",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organism"
+    },
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObservationSnapshot"
+    },
+    "id" : "21"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SamplingMethod"
+    },
+    "id" : "30"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeDataPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/DataValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataValue"
+    },
+    "attributes" : [ "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Feature",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Feature"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/DataPoint",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataPoint"
+    },
+    "subClasses" : [ "15" ],
+    "comment" : {
+      "en" : "super class for all data point categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InventoryRecord"
+    },
+    "id" : "15",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/QualityKind",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualityKind"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/Region",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Region"
+    },
+    "subClasses" : [ "3", "10" ],
+    "id" : "4",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/Data",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/QuantitativeValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeValue"
+    },
+    "attributes" : [ "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AdministrativeRegion"
+    },
+    "id" : "10",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualitativeDataPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "32",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "33",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "38",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "44",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "52",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "53",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "55",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "56",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/inventoryDate",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "inventoryDate"
+    },
+    "cardinality" : "1",
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "range" : "4",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "17",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/hasQualityKind",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasQualityKind"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/snapshotDate",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "snapshotDate"
+    },
+    "cardinality" : "1",
+    "domain" : "21",
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/hasQualityKind",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasQualityKind"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "IntersectsWith"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/locatedIn",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "locatedIn"
+    },
+    "domain" : "23",
+    "attributes" : [ "object", "transitive" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "administrativeDivisionLevel"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasSamplingMethod"
+    },
+    "minCardinality" : "1",
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/inventoryOf",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "inventoryOf"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "includesSnapshot"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "allValues" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/hasDataValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasDataValue"
+    },
+    "domain" : "1",
+    "subproperty" : [ "35", "36" ],
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "33"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "30",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "30",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "30",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/hasQualitativeValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasQualitativeValue"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "41",
+    "attributes" : [ "object", "external" ],
+    "id" : "36"
+  }, {
+    "range" : "30",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "4",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "6",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/includesRecord",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "includesRecord"
+    },
+    "minCardinality" : "1",
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "range" : "21",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "24",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "6",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "4",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "30",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "24",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "6",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "4",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "administrativeDivisionLevel"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/inventoryOf",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "inventoryOf"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "includesSnapshot"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot",
+    "inverse" : "61",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasSnapshot"
+    },
+    "domain" : "24",
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://purl.org/spatialai/forestinvo/v1/core/snapshotOf",
+    "baseIri" : "http://purl.org/spatialai/forestinvo/v1/core",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "snapshotOf"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasQuantitativeValue"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "45",
+    "attributes" : [ "object", "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://purl.org/spatialai/stad/v2/core/hasDataValue",
+    "baseIri" : "http://purl.org/spatialai/stad/v2/core",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasDataValue"
+    },
+    "domain" : "1",
+    "subproperty" : [ "35", "36" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "42"
+  } ]
+}

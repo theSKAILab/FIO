@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/spatialai/forestinvo/v1/core/"
+     xml:base="http://purl.org/spatialai/forestinvo/v1/core/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/spatialai/forestinvo/v1/core/">
+        <owl:versionIRI rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-12</terms:created>
+        <terms:creator xml:lang="en">Kate Beard - https://orcid.org/0000-0002-7703-0270</terms:creator>
+        <terms:creator xml:lang="en">Kingsley Wiafe-Kwakye - https://orcid.org/0009-0007-3741-3721</terms:creator>
+        <terms:creator xml:lang="en">Torsten Hahmann - http://orcid.org/0000-0002-5331-5052</terms:creator>
+        <terms:description xml:lang="en">Forest Inventory Ontology (ForestInvO) offers a structured approach to organizing and representing forest inventory data in a self-describing and interoperable manner.</terms:description>
+        <terms:identifier xml:lang="en">http://purl.org/spatialai/forestinvo/v1/core/</terms:identifier>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-12</terms:issued>
+        <terms:license xml:lang="en">This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/).</terms:license>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-30</terms:modified>
+        <terms:publisher xml:lang="en">Spatial Knowledge and Artificial Intelligence (SKAI) Lab, University of Maine</terms:publisher>
+        <terms:subject>Forest data</terms:subject>
+        <terms:subject>Forest inventory</terms:subject>
+        <terms:subject>tree inventory</terms:subject>
+        <terms:title xml:lang="en">Forest Inventory Ontology (forestinvo)</terms:title>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/Region"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot">
+        <owl:inverseOf rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/snapshotOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/Organism"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/includesRecord -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/includesRecord">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/stad/v2/core/DataPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/inventoryDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/inventoryDate">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/inventoryOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/inventoryOf">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/locatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/hasDataValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/stad/v2/core/hasDataValue">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/stad/v2/core/DataPoint"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/stad/v2/core/DataValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/hasQualitativeValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/stad/v2/core/hasQualitativeValue">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spatialai/stad/v2/core/hasDataValue"/>
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/stad/v2/core/QualitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/hasQualityKind -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/stad/v2/core/hasQualityKind">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/stad/v2/core/DataPoint"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/stad/v2/core/QualityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spatialai/stad/v2/core/hasDataValue"/>
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint"/>
+        <rdfs:range rdf:resource="http://purl.org/spatialai/stad/v2/core/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/snapshotDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/snapshotDate">
+        <rdfs:domain rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/snapshotOf -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spatialai/forestinvo/v1/core/snapshotOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/Region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spatialai/stad/v2/core/DataPoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/includesRecord"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/snapshotDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/Organism -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/Organism"/>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/PlotInventory -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/inventoryOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/forestinvo/v1/core/inventoryDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/Region -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/Region">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/Data -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/Data"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/DataPoint -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/DataPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spatialai/stad/v2/core/Data"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/stad/v2/core/hasDataValue"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spatialai/stad/v2/core/DataValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spatialai/stad/v2/core/hasQualityKind"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spatialai/stad/v2/core/QualityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">super class for all data point categories</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/DataValue -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/DataValue"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/QualitativeValue -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/QualitativeValue"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/QualityKind -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/QualityKind"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint"/>
+    
+
+
+    <!-- http://purl.org/spatialai/stad/v2/core/QuantitativeValue -->
+
+
+    <owl:Class rdf:about="http://purl.org/spatialai/stad/v2/core/QuantitativeValue"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord"/>
+            <rdf:Description rdf:about="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"/>
+            <rdf:Description rdf:about="http://purl.org/spatialai/forestinvo/v1/core/Organism"/>
+            <rdf:Description rdf:about="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory"/>
+            <rdf:Description rdf:about="http://purl.org/spatialai/forestinvo/v1/core/Region"/>
+            <rdf:Description rdf:about="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

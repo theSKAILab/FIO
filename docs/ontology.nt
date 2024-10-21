@@ -1,0 +1,292 @@
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spatialai/forestinvo/v1/core/> .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/created> "2024-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/creator> "Kate Beard - https://orcid.org/0000-0002-7703-0270"@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/creator> "Kingsley Wiafe-Kwakye - https://orcid.org/0009-0007-3741-3721"@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/creator> "Torsten Hahmann - http://orcid.org/0000-0002-5331-5052"@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/description> "Forest Inventory Ontology (ForestInvO) offers a structured approach to organizing and representing forest inventory data in a self-describing and interoperable manner."@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/identifier> "http://purl.org/spatialai/forestinvo/v1/core/"@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/issued> "2024-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/license> "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/)."@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/modified> "2024-05-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/publisher> "Spatial Knowledge and Artificial Intelligence (SKAI) Lab, University of Maine"@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/subject> "Forest data" .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/subject> "Forest inventory" .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/subject> "tree inventory" .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://purl.org/dc/terms/title> "Forest Inventory Ontology (forestinvo)"@en .
+<http://purl.org/spatialai/forestinvo/v1/core/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith
+<http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/Region> .
+<http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/forestinvo/v1/core/Region> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod
+<http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord> .
+<http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot
+<http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spatialai/forestinvo/v1/core/snapshotOf> .
+<http://purl.org/spatialai/forestinvo/v1/core/snapshotOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/Organism> .
+<http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/includesRecord
+<http://purl.org/spatialai/forestinvo/v1/core/includesRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/includesRecord> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> .
+<http://purl.org/spatialai/forestinvo/v1/core/includesRecord> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/stad/v2/core/DataPoint> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot
+<http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> .
+<http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/inventoryDate
+<http://purl.org/spatialai/forestinvo/v1/core/inventoryDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/inventoryDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/inventoryOf
+<http://purl.org/spatialai/forestinvo/v1/core/inventoryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/inventoryOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> .
+<http://purl.org/spatialai/forestinvo/v1/core/inventoryOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/locatedIn
+<http://purl.org/spatialai/forestinvo/v1/core/locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# http://purl.org/spatialai/stad/v2/core/hasDataValue
+<http://purl.org/spatialai/stad/v2/core/hasDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/stad/v2/core/hasDataValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/stad/v2/core/DataPoint> .
+<http://purl.org/spatialai/stad/v2/core/hasDataValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/stad/v2/core/DataValue> .
+# 
+# http://purl.org/spatialai/stad/v2/core/hasQualitativeValue
+<http://purl.org/spatialai/stad/v2/core/hasQualitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/stad/v2/core/hasQualitativeValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spatialai/stad/v2/core/hasDataValue> .
+<http://purl.org/spatialai/stad/v2/core/hasQualitativeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint> .
+<http://purl.org/spatialai/stad/v2/core/hasQualitativeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/stad/v2/core/QualitativeValue> .
+# 
+# http://purl.org/spatialai/stad/v2/core/hasQualityKind
+<http://purl.org/spatialai/stad/v2/core/hasQualityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/stad/v2/core/hasQualityKind> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/stad/v2/core/DataPoint> .
+<http://purl.org/spatialai/stad/v2/core/hasQualityKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/stad/v2/core/QualityKind> .
+# 
+# http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue
+<http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spatialai/stad/v2/core/hasDataValue> .
+<http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint> .
+<http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spatialai/stad/v2/core/QuantitativeValue> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel
+<http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/snapshotDate
+<http://purl.org/spatialai/forestinvo/v1/core/snapshotDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spatialai/forestinvo/v1/core/snapshotDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/snapshotOf
+<http://purl.org/spatialai/forestinvo/v1/core/snapshotOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion
+<http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spatialai/forestinvo/v1/core/Region> .
+<http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot
+<http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spatialai/forestinvo/v1/core/Region> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord
+<http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spatialai/stad/v2/core/DataPoint> .
+<http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot
+<http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/includesRecord> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/snapshotDate> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/Organism
+<http://purl.org/spatialai/forestinvo/v1/core/Organism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/PlotInventory
+<http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/inventoryOf> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/forestinvo/v1/core/inventoryDate> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/Region
+<http://purl.org/spatialai/forestinvo/v1/core/Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/forestinvo/v1/core/Region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+# 
+# http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod
+<http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/Data
+<http://purl.org/spatialai/stad/v2/core/Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/DataPoint
+<http://purl.org/spatialai/stad/v2/core/DataPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spatialai/stad/v2/core/DataPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spatialai/stad/v2/core/Data> .
+<http://purl.org/spatialai/stad/v2/core/DataPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spatialai/stad/v2/core/DataValue> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/stad/v2/core/hasDataValue> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spatialai/stad/v2/core/DataPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spatialai/stad/v2/core/QualityKind> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spatialai/stad/v2/core/hasQualityKind> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spatialai/stad/v2/core/DataPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "super class for all data point categories"@en .
+# 
+# http://purl.org/spatialai/stad/v2/core/DataValue
+<http://purl.org/spatialai/stad/v2/core/DataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint
+<http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/QualitativeValue
+<http://purl.org/spatialai/stad/v2/core/QualitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/QualityKind
+<http://purl.org/spatialai/stad/v2/core/QualityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint
+<http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spatialai/stad/v2/core/QuantitativeValue
+<http://purl.org/spatialai/stad/v2/core/QuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid10 <http://www.w3.org/2002/07/owl#members> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spatialai/forestinvo/v1/core/Region> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spatialai/forestinvo/v1/core/PlotInventory> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spatialai/forestinvo/v1/core/Organism> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

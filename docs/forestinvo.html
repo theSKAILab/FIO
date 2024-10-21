@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Forest Inventory Ontology (ForestInvO)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/spatialai/forestinvo/v1/core/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/spatialai/forestinvo/v1/core/","name":"Forest Inventory Ontology (forestinvo)", "headline":"Document describing the ontology http://purl.org/spatialai/forestinvo/v1/core/", "dateReleased":"2024-06-12", "dateModified":"2024-05-30", "version":"1.0", "author":[{"@type":"Person","name":"Kate Beard - https://orcid.org/0000-0002-7703-0270"},{"@type":"Person","name":"Kingsley Wiafe-Kwakye - https://orcid.org/0009-0007-3741-3721"},{"@type":"Person","name":"Torsten Hahmann - http://orcid.org/0000-0002-5331-5052"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Forest Inventory Ontology (forestinvo)</h1>
+<h2>Release: 2024-06-12</h2>
+
+
+<dl>
+<dt>Modified on: 2024-05-30</dt>
+<dt>This version:</dt>
+<dd><a href="http://purl.org/spatialai/forestinvo/v1/core/">http://purl.org/spatialai/forestinvo/v1/core/</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://purl.org/spatialai/forestinvo/v1/core/">http://purl.org/spatialai/forestinvo/v1/core/</a></dd>
+<dt>Revision:</dt>
+<dd>1.0</dd>
+<dt>Issued on:</dt>
+<dd>2024-06-12</dd>
+
+<dt>Creators:</dt>
+<dd>
+	<a href="https://umaine.edu/scis/people/kingsley-wiafe-kwakye/" target="_blank">Kingsley Wiafe-Kwakye</a>,
+	<a href="https://umaine.edu/scis/people/kate-beard-tisdale/" target="_blank">Kate Beard</a>,
+	<a href="https://umaine.edu/scis/people/torsten-hahmann/" target="_blank">Torsten Hahmann</a>
+</dd>
+
+<dt>Publisher:</dt>
+<dd>
+	<a href="https://ai.umaine.edu/skailab/" target="_blank">Spatial Knowledge and Artificial Intelligence (SKAI) Lab, University of Maine</a>,
+</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-This%20work%20is%20distributed%20under%20a%20Creative%20Commons%20Attribution%20License%20(https://creativecommons.org/licenses/by/4.0/).-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Kate Beard - https://orcid.org/0000-0002-7703-0270, Kingsley Wiafe-Kwakye - https://orcid.org/0009-0007-3741-3721, Torsten Hahmann - http://orcid.org/0000-0002-5331-5052. Forest Inventory Ontology (forestinvo). Revision: 1.0. Retrieved from: http://purl.org/spatialai/forestinvo/v1/core/</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://purl.org/spatialai/forestinvo/v1/core/&gt;</td></tr>
+<tr><td><b>geo</b></td><td>&lt;http://www.opengis.net/ont/geosparql#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>stad</b></td><td>&lt;http://purl.org/spatialai/stad/v2/core/&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Forest Inventory Ontology (forestinvo): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AdministrativeRegion"
+         title="http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion">
+         <span>Administrative Region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spatialai/stad/v2/core/DataPoint" title="http://purl.org/spatialai/stad/v2/core/DataPoint">
+         <span>Data Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InventoryPlot"
+         title="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot">
+         <span>Inventory Plot</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InventoryRecord"
+         title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">
+         <span>Inventory Record</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ObservationSnapshot"
+         title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">
+         <span>Observation Snapshot</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PlotInventory"
+         title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">
+         <span>Plot Inventory</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Region"
+         title="http://purl.org/spatialai/forestinvo/v1/core/Region">
+         <span>Region</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/spatialai/stad/v2/core/hasDataValue"
+         title="http://purl.org/spatialai/stad/v2/core/hasDataValue">
+         <span>has Data Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spatialai/stad/v2/core/hasQualitativeValue"
+         title="http://purl.org/spatialai/stad/v2/core/hasQualitativeValue">
+         <span>has Qualitative Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spatialai/stad/v2/core/hasQualityKind"
+         title="http://purl.org/spatialai/stad/v2/core/hasQualityKind">
+         <span>has Quality Kind</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue"
+         title="http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue">
+         <span>has Quantitative Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSamplingMethod"
+         title="http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod">
+         <span>has Sampling Method</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSnapshot"
+         title="http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot">
+         <span>has Snapshot</span>
+      </a>
+   </li>
+   <li>
+      <a href="#includesRecord"
+         title="http://purl.org/spatialai/forestinvo/v1/core/includesRecord">
+         <span>includes Record</span>
+      </a>
+   </li>
+   <li>
+      <a href="#includesSnapshot"
+         title="http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot">
+         <span>includes Snapshot</span>
+      </a>
+   </li>
+   <li>
+      <a href="#IntersectsWith"
+         title="http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith">
+         <span>Intersects With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#inventoryDate"
+         title="http://purl.org/spatialai/forestinvo/v1/core/inventoryDate">
+         <span>inventory Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#inventoryOf"
+         title="http://purl.org/spatialai/forestinvo/v1/core/inventoryOf">
+         <span>inventory Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#locatedIn"
+         title="http://purl.org/spatialai/forestinvo/v1/core/locatedIn">
+         <span>located In</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#administrativeDivisionLevel"
+         title="http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel">
+         <span>administrative Division Level</span>
+      </a>
+   </li>
+   <li>
+      <a href="#snapshotDate"
+         title="http://purl.org/spatialai/forestinvo/v1/core/snapshotDate">
+         <span>snapshot Date</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Forest Inventory Ontology (forestinvo): Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Forest Inventory Ontology (ForestInvO) offers a structured approach to organizing and representing forest inventory data in a self-describing and interoperable manner.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Forest Inventory Ontology (forestinvo) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Forest Inventory Ontology (forestinvo).
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AdministrativeRegion" title="http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion"> <span>Administrative Region</span> </a></li>
+  <li><a href="#http://purl.org/spatialai/stad/v2/core/DataPoint" title="http://purl.org/spatialai/stad/v2/core/DataPoint"> <span>Data Point</span> </a></li>
+  <li><a href="#InventoryPlot" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot"> <span>Inventory Plot</span> </a></li>
+  <li><a href="#InventoryRecord" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord"> <span>Inventory Record</span> </a></li>
+  <li><a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot"> <span>Observation Snapshot</span> </a></li>
+  <li><a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory"> <span>Plot Inventory</span> </a></li>
+  <li><a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region"> <span>Region</span> </a></li>
+ </ul>
+ <div class="entity" id="AdministrativeRegion">
+  <h3>Administrative Region<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#administrativeDivisionLevel" title="http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel">administrative Division Level</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/spatialai/stad/v2/core/DataPoint">
+  <h3>Data Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/stad/v2/core/DataPoint</p>
+  <div class="comment">
+   <span class="markdown">super class for all data point categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/spatialai/stad/v2/core/Data" target="_blank" title="http://purl.org/spatialai/stad/v2/core/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#InventoryRecord" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">Inventory Record</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://purl.org/spatialai/stad/v2/core/hasDataValue" title="http://purl.org/spatialai/stad/v2/core/hasDataValue">has Data Value</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spatialai/stad/v2/core/hasQualityKind" title="http://purl.org/spatialai/stad/v2/core/hasQualityKind">has Quality Kind</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#includesRecord" title="http://purl.org/spatialai/forestinvo/v1/core/includesRecord">includes Record</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InventoryPlot">
+  <h3>Inventory Plot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#inventoryOf" title="http://purl.org/spatialai/forestinvo/v1/core/inventoryOf">inventory Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InventoryRecord">
+  <h3>Inventory Record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://purl.org/spatialai/stad/v2/core/DataPoint" title="http://purl.org/spatialai/stad/v2/core/DataPoint">Data Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSamplingMethod" title="http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod">has Sampling Method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/Organism" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/Organism">Organism</a> <sup class="type-c" title="class">c</sup>, <a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">Plot Inventory</a> <sup class="type-c" title="class">c</sup>, <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod">Sampling Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ObservationSnapshot">
+  <h3>Observation Snapshot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#includesRecord" title="http://purl.org/spatialai/forestinvo/v1/core/includesRecord">includes Record</a> <sup class="type-op" title="object property">op</sup>, <a href="#snapshotDate" title="http://purl.org/spatialai/forestinvo/v1/core/snapshotDate">snapshot Date</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot">has Snapshot</a> <sup class="type-op" title="object property">op</sup>, <a href="#includesSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot">includes Snapshot</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#InventoryRecord" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">Inventory Record</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/Organism" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/Organism">Organism</a> <sup class="type-c" title="class">c</sup>, <a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">Plot Inventory</a> <sup class="type-c" title="class">c</sup>, <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod">Sampling Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PlotInventory">
+  <h3>Plot Inventory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/PlotInventory</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#includesSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot">includes Snapshot</a> <sup class="type-op" title="object property">op</sup>, <a href="#inventoryDate" title="http://purl.org/spatialai/forestinvo/v1/core/inventoryDate">inventory Date</a> <sup class="type-op" title="object property">op</sup>, <a href="#inventoryOf" title="http://purl.org/spatialai/forestinvo/v1/core/inventoryOf">inventory Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#InventoryRecord" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">Inventory Record</a> <sup class="type-c" title="class">c</sup>, <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/Organism" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/Organism">Organism</a> <sup class="type-c" title="class">c</sup>, <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod">Sampling Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Region">
+  <h3>Region<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/Region</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.opengis.net/ont/geosparql#Feature" target="_blank" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AdministrativeRegion" title="http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion">Administrative Region</a> <sup class="type-c" title="class">c</sup>, <a href="#InventoryPlot" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot">Inventory Plot</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#IntersectsWith" title="http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith">Intersects With</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#IntersectsWith" title="http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith">Intersects With</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#InventoryRecord" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">Inventory Record</a> <sup class="type-c" title="class">c</sup>, <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/Organism" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/Organism">Organism</a> <sup class="type-c" title="class">c</sup>, <a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">Plot Inventory</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod">Sampling Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/spatialai/stad/v2/core/hasDataValue" title="http://purl.org/spatialai/stad/v2/core/hasDataValue"> <span>has Data Value</span> </a></li>
+  <li><a href="#http://purl.org/spatialai/stad/v2/core/hasQualitativeValue" title="http://purl.org/spatialai/stad/v2/core/hasQualitativeValue"> <span>has Qualitative Value</span> </a></li>
+  <li><a href="#http://purl.org/spatialai/stad/v2/core/hasQualityKind" title="http://purl.org/spatialai/stad/v2/core/hasQualityKind"> <span>has Quality Kind</span> </a></li>
+  <li><a href="#http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue" title="http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue"> <span>has Quantitative Value</span> </a></li>
+  <li><a href="#hasSamplingMethod" title="http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod"> <span>has Sampling Method</span> </a></li>
+  <li><a href="#hasSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot"> <span>has Snapshot</span> </a></li>
+  <li><a href="#includesRecord" title="http://purl.org/spatialai/forestinvo/v1/core/includesRecord"> <span>includes Record</span> </a></li>
+  <li><a href="#includesSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot"> <span>includes Snapshot</span> </a></li>
+  <li><a href="#IntersectsWith" title="http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith"> <span>Intersects With</span> </a></li>
+  <li><a href="#inventoryDate" title="http://purl.org/spatialai/forestinvo/v1/core/inventoryDate"> <span>inventory Date</span> </a></li>
+  <li><a href="#inventoryOf" title="http://purl.org/spatialai/forestinvo/v1/core/inventoryOf"> <span>inventory Of</span> </a></li>
+  <li><a href="#locatedIn" title="http://purl.org/spatialai/forestinvo/v1/core/locatedIn"> <span>located In</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/spatialai/stad/v2/core/hasDataValue">
+  <h3>has Data Value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/stad/v2/core/hasDataValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spatialai/stad/v2/core/hasQualitativeValue" title="http://purl.org/spatialai/stad/v2/core/hasQualitativeValue">has Qualitative Value</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue" title="http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue">has Quantitative Value</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spatialai/stad/v2/core/DataPoint" title="http://purl.org/spatialai/stad/v2/core/DataPoint">Data Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/stad/v2/core/DataValue" target="_blank" title="http://purl.org/spatialai/stad/v2/core/DataValue">Data Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/spatialai/stad/v2/core/hasQualitativeValue">
+  <h3>has Qualitative Value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/stad/v2/core/hasQualitativeValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spatialai/stad/v2/core/hasDataValue" title="http://purl.org/spatialai/stad/v2/core/hasDataValue">has Data Value</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint" target="_blank" title="http://purl.org/spatialai/stad/v2/core/QualitativeDataPoint">Qualitative Data Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/stad/v2/core/QualitativeValue" target="_blank" title="http://purl.org/spatialai/stad/v2/core/QualitativeValue">Qualitative Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/spatialai/stad/v2/core/hasQualityKind">
+  <h3>has Quality Kind<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/stad/v2/core/hasQualityKind</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spatialai/stad/v2/core/DataPoint" title="http://purl.org/spatialai/stad/v2/core/DataPoint">Data Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/stad/v2/core/QualityKind" target="_blank" title="http://purl.org/spatialai/stad/v2/core/QualityKind">Quality Kind</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue">
+  <h3>has Quantitative Value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/stad/v2/core/hasQuantitativeValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spatialai/stad/v2/core/hasDataValue" title="http://purl.org/spatialai/stad/v2/core/hasDataValue">has Data Value</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint" target="_blank" title="http://purl.org/spatialai/stad/v2/core/QuantitativeDataPoint">Quantitative Data Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/stad/v2/core/QuantitativeValue" target="_blank" title="http://purl.org/spatialai/stad/v2/core/QuantitativeValue">Quantitative Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSamplingMethod">
+  <h3>has Sampling Method<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/hasSamplingMethod</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InventoryRecord" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryRecord">Inventory Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/SamplingMethod">Sampling Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSnapshot">
+  <h3>has Snapshot<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/hasSnapshot</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/forestinvo/v1/core/Organism" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/Organism">Organism</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/spatialai/forestinvo/v1/core/snapshotOf" target="_blank" title="http://purl.org/spatialai/forestinvo/v1/core/snapshotOf">snapshot Of</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="includesRecord">
+  <h3>includes Record<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/includesRecord</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spatialai/stad/v2/core/DataPoint" title="http://purl.org/spatialai/stad/v2/core/DataPoint">Data Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="includesSnapshot">
+  <h3>includes Snapshot<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/includesSnapshot</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">Plot Inventory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="IntersectsWith">
+  <h3>Intersects With<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/IntersectsWith</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Region" title="http://purl.org/spatialai/forestinvo/v1/core/Region">Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="inventoryDate">
+  <h3>inventory Date<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/inventoryDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">Plot Inventory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="inventoryOf">
+  <h3>inventory Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/inventoryOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PlotInventory" title="http://purl.org/spatialai/forestinvo/v1/core/PlotInventory">Plot Inventory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InventoryPlot" title="http://purl.org/spatialai/forestinvo/v1/core/InventoryPlot">Inventory Plot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="locatedIn">
+  <h3>located In<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/locatedIn</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#administrativeDivisionLevel" title="http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel"> <span>administrative Division Level</span> </a></li>
+  <li><a href="#snapshotDate" title="http://purl.org/spatialai/forestinvo/v1/core/snapshotDate"> <span>snapshot Date</span> </a></li>
+ </ul>
+ <div class="entity" id="administrativeDivisionLevel">
+  <h3>administrative Division Level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/administrativeDivisionLevel</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AdministrativeRegion" title="http://purl.org/spatialai/forestinvo/v1/core/AdministrativeRegion">Administrative Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="snapshotDate">
+  <h3>snapshot Date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spatialai/forestinvo/v1/core/snapshotDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ObservationSnapshot" title="http://purl.org/spatialai/forestinvo/v1/core/ObservationSnapshot">Observation Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
